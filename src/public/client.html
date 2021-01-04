@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>klk waeae</h1>
+
+    <img width="800px" src="" id="canvas" alt="" />
+    <script>
+      "use strict";
+      let socket = io();
+      let img = document.querySelector("#canvas");
+      socket.on("stream", function (data) {
+        img.src = data;
+      });
+    </script>
+  </body>
+</html>
